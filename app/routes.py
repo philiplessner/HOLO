@@ -7,32 +7,38 @@ bp = Blueprint('views', __name__, url_prefix='/')
 
 @bp.route("/")
 def home():
-    return render_template("index.html")
+    title = "Home of Love Orphanage"
+    return render_template("index.html", title=title)
 
 
 @bp.route("/children")
 def children():
-    return render_template("children.html")
+    title = "Children"
+    return render_template("children.html", title=title)
 
 
 @bp.route("/widows")
 def widows():
-    return render_template("widows.html")
+    title = "Widows"
+    return render_template("widows.html", title=title)
 
 
 @bp.route("/donate")
 def donate():
-    return render_template("donate.html")
+    title = "Donate"
+    return render_template("donate.html", title=title)
 
 
 @bp.route("/contact")
 def contact():
-    return render_template("contact.html")
+    title = "Contact"
+    return render_template("contact.html", title=title)
 
 
 @bp.route("/mission_vision")
 def mission_vision():
-    return render_template("mission_vision.html")
+    title = "Mission&Vision"
+    return render_template("mission_vision.html", title=title)
 
 
 @bp.route("/favicon.ico")
