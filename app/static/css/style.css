@@ -1,0 +1,14 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.full-viewport-img {
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  height: 40vh; /* Sets the height */
+  width: 100vw; /* Sets the width */
+  display: block; /* Removes excess space often left by inline images */
+}
+.bg-custom-color {
+  background-color: #999999 !important;
+}
