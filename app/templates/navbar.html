@@ -12,6 +12,17 @@
               <a class="nav-link active" aria-current="page" href="{{ url_for('views.home') }}">Home</a>
             </li>
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{{ url_for('views.contact') }}">Contact</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{ url_for('views.mission_vision') }}">Mission and Vision</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="URL Goes Here">Location</a></li>
+            <li><hr class="dropdown-divider"></li>
+          </ul>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Our Work
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -24,17 +35,6 @@
               <a class="nav-link" href="{{ url_for('views.donate') }}">Donate</a>
             </li>
 
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            About
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('views.contact') }}">Contact</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{{ url_for('views.mission_vision') }}">Mission and Vision</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="URL Goes Here">Location</a></li>
-            <li><hr class="dropdown-divider"></li>
-          </ul>
           </ul>
              <ul class="navbar-nav ml-auto nav-flex-icons">
             <li class="nav-item me-3 me-lg-0">
