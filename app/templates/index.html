@@ -1,13 +1,32 @@
 {% extends "base.html" %}
+{% block page_css %}
+<style>
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.full-viewport-img {
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  height: 45vh; /* Sets the height */
+  width: 100vw; /* Sets the width */
+  display: block; /* Removes excess space often left by inline images */
+}
+</style>
+{% endblock %}
+
 {% block content %}
 <!--INTRO-->
 <section>
-  <div class="container-fluid my-3 mx-8">
-        <h1>HOME OF LOVE ORPHANAGE</h1>
-    <div class="row">
-      <div class="col-4">
-          <img src="./static/images/home_page_orphanage.png" alt="Home Page Image" class="img-fluid">
+  <div class="container-fluid p-0 m-0">
+    <div class="row gx-0"> <!--gx-0 removes column gutters-->
+      <div class="col-12">
+        <img src="./static/images/Home_Page_Banner.png", alt="Banner", class="full-viewport-img">
       </div>
+    </div>
+  </div>
+  <div class="container-fluid my-3 mx-8">
+    <div class="row">
       <div class="col-4">
         <p class="fs-5">
         Home of Love Orphanage is a grassroots organization serving orphaned children in a small community in Tororo, Uganda.
@@ -16,6 +35,8 @@
         I was born and raised in Uganda and witnessed a lot of suffering and neglect of orphaned children during that time. 
         After coming to the United States, I felt the inner pull to help make a difference in as many lives as possible.
 </p>
+      </div>
+      <div class="col-4">
         <p class="fs-5">
         In 2003, I started sending money to my mother in Uganda to care for 6 orphans.
         In 2005, I bought a plot of land to help expand the ministry of helping these children. The land had no structures and no running water. 
@@ -24,8 +45,6 @@
         Somebody had to take care of these children. We took them in and placed them in temporary housing until we were able to accommodate them.
         </p>
       </div>
-        </div>
-        <div class="row">
           <div class="col-4">
             <p class="fs-5">
               And so the founding of Home of Love Orphanage took place in 2008. 
@@ -35,12 +54,12 @@
               It is our mission to teach entrepreneurism, leadership, and sustainable agriculture to raise up leaders who will bring positive change in their society.
             </p>
             </div>
-              </div>
+        </div>
     </div>
     </section>
     <section>
        <div class="container-fluid my-5 ms-3">
-        <h3>Our Children Enoying Some Activities</h3>
+        <h3>Our Children Enjoying Some Activities</h3>
     </div>
        <div class="row row justify-content-center">
         <div class="col-md-8 d-flex justify-content-center text-center">
