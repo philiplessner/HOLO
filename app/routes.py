@@ -17,6 +17,13 @@ def children():
     return render_template("children.html", title=title)
 
 
+@bp.route("/children/<child>")
+def child(child):
+    title = child
+    if (child == "annabel"):
+        return render_template("annabel.html", title=title)
+
+
 @bp.route("/widows")
 def widows():
     title = "Widows"

@@ -7,7 +7,7 @@
     <div class="row bg-secondary text-light">
       <div class="col-4">
         <br>
-          <img src="./static/images/children_1.png" alt="Picture of Children" class="img-fluid">
+          <img src="{{ url_for('static', filename='/images/children_1.png') }}" alt="Picture of Children" class="img-fluid">
       </div>
       <div class="col-4">
         <p class="fs-5">
@@ -40,7 +40,7 @@
 
     <div class="row bg-info">
       <div class="col-4">
-        <img src="./static/images/annabel_2a.png" alt="Annabel" class="img-fluid d-block mx-auto">
+        <img src="{{ url_for('static', filename='images/annabel_2a.png') }}" alt="Annabel" class="img-fluid d-block mx-auto">
         <p class="fs-5">
           Meet Annabel, a shining star in our organization. For 12 incredible
           years, Annabel has called our community home. Rescued at just 3
@@ -48,11 +48,11 @@
           streets, searching for food for herself and her loyal
           dog. Even at a tender age, Annabel's aspirations
           knew no bounds – she dreamed of becoming a doctor.
-          <a  href="URL Goes Here">More...</a>
+          <a  href="/children/annabel">More...</a>
         </p>
       </div>
       <div class="col-4">
-          <img src="./static/images/benjamin_1a.png" alt="Benjamin" class="img-fluid d-block mx-auto">
+          <img src="{{ url_for('static', filename='/images/benjamin_1a.png') }}" alt="Benjamin" class="img-fluid d-block mx-auto">
         <p class="fs-5">
           Meet Benjamin, a bright and talented young boy who
           has been a part of our family for 8 incredible years.
@@ -62,7 +62,7 @@
         </p>
       </div>
       <div class="col-4">
-          <img src="./static/images/abraham_1a.png" alt="Abraham" class="img-fluid d-block mx-auto">
+          <img src="{{ url_for('static', filename='/images/abraham_1a.png') }}" alt="Abraham" class="img-fluid d-block mx-auto">
         <p class="fs-5">
           And here comes Abraham, a resilient and ambitious young man who has
           overcome unimaginable adversity. This young orphan suffered from untreated
