@@ -22,6 +22,10 @@ def child(child):
     title = child
     if (child == "annabel"):
         return render_template("annabel.html", title=title)
+    elif (child == 'benjamin'):
+        return render_template("benjamin.html", title=title)
+    elif (child == 'abraham'):
+        return render_template("abraham.html", title=title)
 
 
 @bp.route("/widows")

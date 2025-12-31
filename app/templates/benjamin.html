@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+  <div class="container-fluid my-3 mx-8">
+    <h1>Benjamin</h1>
+    <div class="row bg-secondary text-light">
+      <div class="col-2">
+          <img src="{{ url_for('static', filename='images/benjamin_page_1.png') }}" alt="Picture of Annabel" class="img-fluid" height="61%" width="61%">
+      </div>
+      <div class="col-3">
+        <p class="fs-5">
+          While academics may not be his forte, Benjamin shines in the
+          football field! He’s a natural athlete with a deep love for sports. Versatile and skilled,
+          Benjamin can play almost any position, but his true calling is as a goalkeeper. With
+          him guarding the net, Victory is almost guaranteed!  Benjamin’s dedication, teamwork, and raw
+          talent make him an invaluable asset to his team. We're proud to support and nurture his passion for football,
+          helping him develop his skills and reach his full potential.
+        </p>
+      </div>
+      <div class="col-2">
+          <img src="{{ url_for('static', filename='images/benjamin_page_2.png') }}" alt="Picture of Annabel" class="img-fluid" height="80%" width="80%">
+      </div>
+    </div>
+      </div>
+</section>
+{% endblock %}
