@@ -1,11 +1,27 @@
 {% extends "base.html" %}
+{% block page_css %}
+<style>
+  .background-image-container {
+  background-image: url('./static/images/lake_victoria_water_lilly.jpg');
+  background-size: cover; 
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  /* height: 1300px; /* Set a specific height
+  width: 75%; */
+  opacity: 1.0;
+}
+</style>
+{% endblock %}
+
 {% block content %}
-<!--INTRO-->
 <section>
   <div class="container-fluid my-3 mx-8">
+        <h1>Contact</h1>
+        </div>
+  <div class="container-fluid my-3 mx-8 background-image-container text-black">
     <div class="row">
       <div class="col-4">
-        <h1>Contact</h1>
         <p class="fs-3">
        email: stellaowino@gmail.com
        </p>

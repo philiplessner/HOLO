@@ -1,21 +1,33 @@
 {% extends "base.html" %}
+{% block page_css %}
+<style>
+.drop-cap {
+  float: left;
+  padding-top: 0.1em;
+  padding-right: 0.1em; 
+  font-size: 5em; 
+  line-height: .6em;
+}
+</style>
+{% endblock %}
 {% block content %}
 <section>
   <div class="container-fluid my-3 mx-8 text-light">
     <h1>Mission and Vision</h1>
     <div class="row bg-secondary">
       <div class="col-4">
-          <img src="./static/images/mission_vision_1.png" alt="Mission_Vision" class="img-fluid">
+          <img src="{{ url_for('static', filename='images/mission_vision_1.png') }}" alt="Mission_Vision" class="img-fluid">
       </div>
-      <div class="col-4">
+      <div class="col-4 align-self-center">
         <p class="fs-5">
-            <strong>Our mission</strong> is to provide comprehensive care and support to vulnerable children and
+            <span class="drop-cap">Our mission</span> is to provide comprehensive care and support to vulnerable children and
             widows, empowering them to reach their full potential. We offer education, counseling,
             medical aid, and basic necessities to orphaned, neglected, and abandoned children,
             while equipping widows with skills and resources to become self-sufficient and independent.
         </p>
+        <br><br>
         <p class="fs-5">
-            <strong>Our vision</strong> is to transform the lives of 6,000 African children and widows, breaking the
+            <span class="drop-cap">Our vision</span> is to transform the lives of 6,000 African children and widows, breaking the
             cycle of poverty and dependence. Building on our success of over 100 children now leading
             independent lives, we are striving to create a brighter future where every individual has the
             opportunity to realize their God-given potential and contribute positively to their society.
