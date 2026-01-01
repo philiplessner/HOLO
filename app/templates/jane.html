@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+  <div class="container-fluid my-3 mx-8">
+    <h1>Jane</h1>
+    <div class="row bg-secondary text-light">
+      <div class="col-2">
+          <img src="{{ url_for('static', filename='images/jane_page_1.png') }}" alt="Picture of Jane" class="img-fluid" height="50%" width="50%">
+      </div>
+      <div class="col-3">
+        <p class="fs-5">
+          Her determination led her to the HOLO organization, where she requested
+          assistance in exchange for work as a cleaner. Recognizing that Jane’s needs
+          extend beyond immediate sustenance, we developed a long-term
+          plan to support her.
+        </p>
+        <p class="fs-5">
+          Our organization sponsored her education, enabling her to return to school. Jane’s
+          passion and ambition drove her to excel academically. After completing high school,
+          Jane pursued higher education, earning a diploma in hospitality from college.
+        </p>
+        <p class="fs-5">
+          Today, she is employed, supporting her siblings and actively pursuing her dream of
+          becoming a model. We are thrilled to witness Jane's transformation and proud to
+          have played a role in empowering her goals. Her success exemplifies the profound
+          impact of our organization’s commitment to creating lasting positive change in
+          people’s lives.
+        </p>
+      </div>
+    </div>
+      </div>
+</section>
+{% endblock %}

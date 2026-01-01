@@ -28,6 +28,8 @@ def child(child):
         return render_template("abraham.html", title=title)
     elif (child == 'deborah'):
         return render_template("deborah.html", title=title)
+    elif (child == 'jane'):
+        return render_template("jane.html", title=title)
 
 @bp.route("/widows")
 def widows():
