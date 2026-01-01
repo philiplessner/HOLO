@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+  <div class="container-fluid my-3 mx-8">
+    <h1>Benjamin</h1>
+    <div class="row bg-secondary text-light">
+      <div class="col-2">
+          <img src="{{ url_for('static', filename='images/deborah_page_1.png') }}" alt="Picture of Deborah" class="img-fluid" height="61%" width="61%">
+      </div>
+      <div class="col-3">
+        <p class="fs-5">
+          Initially , Debora sought assistance from the
+          HOLO organization, hoping to find a solution for
+          her children’s care. However, recognising that
+          separating Debora from her children would not
+          provide a long term solution, our organization
+          instead offered her enrollment in our tailaring
+          program.
+          </p>
+        <p class="fs-5">
+          This training enabled Debora to acquire
+          valuable skill, generating income and
+          empowering her to provide for her twins. Our approach focuses on
+          fostering self sufficiency, transforming individuals into productive
+          members of their communities.
+        <p class="fs-5">
+          We take pride in Debora’s remarkable progress, as she has evolved
+          into a skilled tailor, not only supporting her children, but also
+          contributing to the community’s well being.
+        </p>
+      </div>
+      <div class="col-2">
+          <img src="{{ url_for('static', filename='images/deborah_page_2.png') }}" alt="Picture of Deborah" class="img-fluid" height="80%" width="80%">
+      </div>
+    </div>
+      </div>
+</section>
+{% endblock %}

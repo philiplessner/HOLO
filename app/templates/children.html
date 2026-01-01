@@ -74,6 +74,26 @@
         </p>
       </div>
     </div>
+
+    <div class="row bg-secondary text-light">
+      <div class="col-4">
+        <img src="{{ url_for('static', filename='images/deborah_children_page.png') }}" alt="Annabel" class="img-fluid d-block mx-auto">
+        <p class="fs-5">
+          HOLO organization also operates a vocational training center,
+          empowering numerous individuals to acquire marketable skills and
+          transform their lives.Our training programs include tailoring, cosmetology,
+          embroidery and bakery arts.
+        </p>
+        <p class="fs-5">
+          A notable success story is that of Deborah, a seventh-grade student who
+          experienced unimaginable hardship. At the age of 14, Debora was a vitim
+          of rape, resulting in the birth of twins. With limited education and no
+          financial sources, Debora faced significant challenges in caring for her
+          children.
+          <a  href="{{ url_for('views.child', child='deborah') }}">More...</a>
+        </p>
+      </div>
+  </div>
   </div>
 </section>
 {% endblock %}
