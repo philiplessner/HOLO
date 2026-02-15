@@ -54,7 +54,6 @@ def mission_vision():
     title = "Mission&Vision"
     return render_template("mission_vision.html", title=title)
 
-
 @bp.route("/favicon.ico")
 def favicon():
     return send_from_directory('static/images/', 'favicon.ico')
