@@ -2,14 +2,11 @@
 {% block page_css %}
 <style>
   .background-image-container {
-  background-image: url('static/images/rock_nocaption.png');
+  background-image: url('static/images/donate_revised.png');
   background-size: cover;
+  min-height: 504px;
   background-position: center;
-  /* height: 100vh; */
-  width: 100vw; 
   color: rgb(177, 78, 8);
-  height: 600px; /* Set a specific height
-  width: 75%; */
   opacity: 1.0;
 }
 </style>
@@ -20,9 +17,10 @@
     <div class="background-image-container d-flex align-items-left justify-content-left">
     <h1>Donate</h1>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick"><br>
-<input name="hosted_button_id" type="hidden" value="RCG3XTFTYZD2J"><br>
-<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" type="image"><br>
-<img loading="lazy" decoding="async" style="display: block; margin-left: auto; margin-right: auto;" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0"></form>
+      <input name="hosted_button_id" type="hidden" value="RCG3XTFTYZD2J"><br>
+      <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" type="image"><br>
+      <img loading="lazy" decoding="async" style="display: block; margin-left: auto; margin-right: auto;" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0">
+    </form>
     </div>
 </div>
   <div class="bg-secondary text-light">
