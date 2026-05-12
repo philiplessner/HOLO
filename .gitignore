@@ -2,3 +2,4 @@ __pycache__
 /images/
 /web-info/
 *.pdf
+/templates/children_extra.html

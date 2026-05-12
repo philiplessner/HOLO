@@ -1,0 +1,74 @@
+    <div class="row bg-info">
+      <div class="col-4">
+        <br><br><br>
+        <h2>These are the stories of some of our children</h2>
+        <br><br><br>
+      </div>
+    </div>
+
+    <div class="row bg-info">
+      <div class="col-4">
+        <img src="{{ url_for('static', filename='images/annabel_2a.png') }}" alt="Annabel" class="img-fluid d-block mx-auto">
+        <p class="fs-5">
+          Meet Annabel, a shining star in our organization. For 12 incredible
+          years, Annabel has called our community home. Rescued at just 3
+          years old, she was found wandering village
+          streets, searching for food for herself and her loyal
+          dog. Even at a tender age, Annabel's aspirations
+          knew no bounds – she dreamed of becoming a doctor.
+          <a  href="{{ url_for('views.child', child='annabel') }}">More...</a>
+        </p>
+      </div>
+      <div class="col-4">
+          <img src="{{ url_for('static', filename='/images/benjamin_1a.png') }}" alt="Benjamin" class="img-fluid d-block mx-auto">
+        <p class="fs-5">
+          Meet Benjamin, a bright and talented young boy who
+          has been a part of our family for 8 incredible years.
+          Abandoned at just 3 years old, Benjamin has grown into
+          a confident and compassionate individual.
+          <a  href="{{ url_for('views.child', child='benjamin') }}">More...</a>
+        </p>
+      </div>
+      <div class="col-4">
+          <img src="{{ url_for('static', filename='/images/abraham_1a.png') }}" alt="Abraham" class="img-fluid d-block mx-auto">
+        <p class="fs-5">
+          And here comes Abraham, a resilient and ambitious young man who has
+          overcome unimaginable adversity. This young orphan suffered from untreated
+          vision problems due to lack of access to medical care. By age three, he had
+          developed a partial blindness in one eye.
+          Abandoned at just 3.5 years old, Abraham was left to fend for himself, often
+          sitting on his father’s grave, relying on the kindness of strangers for food.
+          <a  href="{{ url_for('views.child', child='abraham') }}">More...</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row bg-secondary text-light">
+      <div class="col-4">
+        <img src="{{ url_for('static', filename='images/deborah_children_page.png') }}" alt="Deborah" class="img-fluid d-block mx-auto">
+        <p class="fs-5">
+          HOLO organization also operates a vocational training center,
+          empowering numerous individuals to acquire marketable skills and
+          transform their lives.Our training programs include tailoring, cosmetology,
+          embroidery and bakery arts.
+        </p>
+        <p class="fs-5">
+          A notable success story is that of Deborah, a seventh-grade student who
+          experienced unimaginable hardship. At the age of 14, Debora was a vitim
+          of rape, resulting in the birth of twins. With limited education and no
+          financial sources, Debora faced significant challenges in caring for her
+          children.
+          <a  href="{{ url_for('views.child', child='deborah') }}">More...</a>
+        </p>
+      </div>
+
+      <div class="col-4">
+        <img src="{{ url_for('static', filename='images/jane_children_page.png') }}" alt="Jane" class="img-fluid d-block mx-auto">
+        <p class="fs-5">
+          We are also delighted to share the inspiring story of Jane, a remarkable
+          teenager who overcame immense adversity. Orphaned at a young age, Jane
+          assumed responsibility for her four younger siblings.
+          <a  href="{{ url_for('views.child', child='jane') }}">More...</a>
+        </p>
+      </div>
+  </div>
