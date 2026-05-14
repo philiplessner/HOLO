@@ -20,6 +20,21 @@ def children():
     return render_template("children.html", title=title)
 
 
+@bp.route("/blog")
+def blog():
+    stmt = (db.select(Blog.title, Blog.date, Blog. author, Blog.id)
+                      .select_from(Blog)
+                      .order_by(Blog.date.desc()))
+    blogs = db.session.execute(stmt).all()
+    rows = list()
+    for blog in blogs:
+        rows.append(blog)
+    templateData = {"rows": rows}
+    templateData['title'] = " HOLO Blog"
+    print(templateData)
+    return render_template('blog.html', **templateData)
+
+
 @bp.route("/blog/<blogid>")
 def blogpost(blogid):
     Post  = namedtuple('Post', ['title', 'body', 'date', 'id', 'pagecss', 'author'])
