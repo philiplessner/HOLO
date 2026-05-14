@@ -31,7 +31,6 @@ def blog():
         rows.append(blog)
     templateData = {"rows": rows}
     templateData['title'] = " HOLO Blog"
-    print(templateData)
     return render_template('blog.html', **templateData)
 
 
