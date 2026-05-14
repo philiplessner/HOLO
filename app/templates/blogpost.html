@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block page_css %}
+{% if blogdata.pagecss %}
+    {{ blogdata.pagecss |safe }}
+{% endif %}
+{% endblock %}
+{% block content %}
+    <div class="container" style="max-width: 75em;">
+        <h2>{{ blogdata.title }}</h2>
+        <p>{{ blogdata.author }}</p>
+        <p>{{ blogdata.date }}</p>
+
+        <br>
+        {{ blogdata.body |safe }}
+    </div>
+
+
+
+{% endblock %}
