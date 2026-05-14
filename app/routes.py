@@ -1,5 +1,8 @@
+from collections import namedtuple
 from flask import render_template, send_from_directory
 from flask import Blueprint
+from app import db
+from app.models import Blog
 
 
 bp = Blueprint('views', __name__, url_prefix='/')
@@ -15,6 +18,18 @@ def home():
 def children():
     title = "Children"
     return render_template("children.html", title=title)
+
+
+@bp.route("/blog/<blogid>")
+def blogpost(blogid):
+    Post  = namedtuple('Post', ['title', 'body', 'date', 'id', 'pagecss', 'author'])
+    stmt = (db.select(Blog.title, Blog.body, Blog.date, Blog.id, Blog.pagecss, Blog.author)
+                      .select_from(Blog)
+                      .where(Blog.id == blogid))
+    blog = Post(*(db.session.execute(stmt).all()[0]))
+    templateData = {"blogdata": blog}
+    templateData['title'] = "Blog"
+    return render_template('blogpost.html', **templateData)
 
 
 @bp.route("/children/<child>")
