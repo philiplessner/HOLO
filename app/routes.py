@@ -1,4 +1,5 @@
 from collections import namedtuple
+from datetime import date, datetime
 from flask import render_template, send_from_directory
 from flask import Blueprint
 from app import db
@@ -28,6 +29,8 @@ def blog():
     blogs = db.session.execute(stmt).all()
     rows = list()
     for blog in blogs:
+        blog = list(blog)
+        blog[1] = datetime.fromisoformat(blog[1]).strftime("%B %d, %Y")
         rows.append(blog)
     templateData = {"rows": rows}
     templateData['title'] = " HOLO Blog"
