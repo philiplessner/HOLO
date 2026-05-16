@@ -4,10 +4,18 @@
 <div class="container-fluid my-3 mx-8">
     <h2>{{ title }}</h2>
     <br><br>
+    <div class="row mb-2">
+      <div class="col-4">
+          <img src="{{ url_for('static', filename='/images/grey-crowned-crane.jpg') }}" alt="Picture of Children" class="img-fluid">
+      </div>
+      <div class="col-4">
     {% for row in rows %}
     <div class="row mb-2">
       <h3><a href="{{url_for('views.blogpost', blogid=row[3]) }}">{{ row[0] }}</a> by {{ row[2] }} {{ row[1] }}</h3>
         {% endfor %}
+    </div>
+    </div>
+    </div>
     </div>
 
 {% endblock %}
