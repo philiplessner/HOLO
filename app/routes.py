@@ -1,5 +1,5 @@
 from collections import namedtuple
-from datetime import date, datetime
+from datetime import datetime
 from flask import render_template, send_from_directory
 from flask import Blueprint
 from app import db
@@ -30,7 +30,7 @@ def blog():
     rows = list()
     for blog in blogs:
         blog = list(blog)
-        blog[1] = datetime.fromisoformat(blog[1]).strftime("%B %d, %Y")
+        blog[1] = iso2mdy(blog[1])
         rows.append(blog)
     templateData = {"rows": rows}
     templateData['title'] = " HOLO Blog"
@@ -44,6 +44,7 @@ def blogpost(blogid):
                       .select_from(Blog)
                       .where(Blog.id == blogid))
     blog = Post(*(db.session.execute(stmt).all()[0]))
+    blog = blog._replace(date=iso2mdy(blog.date))
     templateData = {"blogdata": blog}
     templateData['title'] = "Blog"
     return render_template('blogpost.html', **templateData)
@@ -94,3 +95,6 @@ def location():
 @bp.route("/favicon.ico")
 def favicon():
     return send_from_directory('static/images/', 'favicon.ico')
+
+def iso2mdy(iso_date):
+    return datetime.fromisoformat(iso_date).strftime("%B %d, %Y")

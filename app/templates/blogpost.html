@@ -9,9 +9,7 @@
 {% block content %}
     <div class="container" style="max-width: 75em;">
         <h1>{{ blogdata.title }}</h1>
-        <h4> By: <i>{{ blogdata.author }}</i></h4>
-        <h4>{{ blogdata.date }}</h4>
-
+        <h4> by <i>{{ blogdata.author }} {{ blogdata.date }}</i></h4>
         <br>
         {{ blogdata.body |safe }}
     </div>
