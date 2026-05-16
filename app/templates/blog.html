@@ -1,17 +1,27 @@
 {% extends "base.html" %}
+{% block page_css %}
+<style>
+  a {
+    text-decoration:none;
+    font-weight: bold;
+    color: black;
+  }
+</style>
+{% endblock %}
 {% block content %}
 
 <div class="container-fluid my-3 mx-8">
     <h2>{{ title }}</h2>
     <br><br>
     <div class="row mb-2">
-      <div class="col-4">
+      <div class="col-5">
           <img src="{{ url_for('static', filename='/images/grey-crowned-crane.jpg') }}" alt="Picture of Children" class="img-fluid">
       </div>
-      <div class="col-4">
+      <div class="col-6">
     {% for row in rows %}
     <div class="row mb-2">
-      <h3><a href="{{url_for('views.blogpost', blogid=row[3]) }}">{{ row[0] }}</a> by {{ row[2] }} {{ row[1] }}</h3>
+      <h3><a href="{{url_for('views.blogpost', blogid=row[3]) }}">{{ row[0] }}</a></h3>
+      <p>by {{ row[2] }} {{ row[1] }}</p>
         {% endfor %}
     </div>
     </div>
