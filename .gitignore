@@ -3,3 +3,4 @@ __pycache__
 /web-info/
 *.pdf
 /templates/children_extra.html
+/app/db/holo_backup.db

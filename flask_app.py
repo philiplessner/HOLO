@@ -1,5 +1,6 @@
 import os
 from app import create_app, db
+from flask_migrate import Migrate
 
 
 app = create_app()
@@ -8,6 +9,8 @@ path2this_directory = os.path.abspath(os.path.dirname(__file__))
 app = create_app()
 app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{os.path.join(path2this_directory, 'app/db/holo.db')}"
 db.init_app(app)
+migrate = Migrate(app, db)
+
 
 # with app.app_context():
 #    db.create_all()
