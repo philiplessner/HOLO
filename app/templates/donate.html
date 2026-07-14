@@ -11,6 +11,30 @@
   color: rgb(177, 78, 8);
   opacity: 1.0;
 }
+  .background-image-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+
+  .background-image-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+  }
+
+  @media (max-width: 576px) {
+    .background-image-container {
+      min-height: 260px;
+      padding: 1rem 0.75rem;
+      background-position: center top;
+    }
+    .background-image-container h1 {
+      font-size: 1.6rem;
+    }
+  }
 </style>
 {% endblock %}
 {% block content %}
