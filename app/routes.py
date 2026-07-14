@@ -1,5 +1,6 @@
 from collections import namedtuple
 from datetime import datetime
+import os
 from flask import render_template, send_from_directory
 from flask import Blueprint
 from app import db
@@ -91,6 +92,11 @@ def mission_vision():
 def location():
     title = "Location"
     return render_template("location.html", title=title)
+
+@bp.route("/sitemap.xml")
+def sitemap():
+    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    return send_from_directory(root_dir, 'sitemap.xml')
 
 @bp.route("/favicon.ico")
 def favicon():
