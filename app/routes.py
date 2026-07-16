@@ -51,20 +51,6 @@ def blogpost(blogid):
     return render_template('blogpost.html', **templateData)
 
 
-@bp.route("/children/<child>")
-def child(child):
-    title = child
-    if (child == "annabel"):
-        return render_template("annabel.html", title=title)
-    elif (child == 'benjamin'):
-        return render_template("benjamin.html", title=title)
-    elif (child == 'abraham'):
-        return render_template("abraham.html", title=title)
-    elif (child == 'deborah'):
-        return render_template("deborah.html", title=title)
-    elif (child == 'jane'):
-        return render_template("jane.html", title=title)
-
 @bp.route("/widows")
 def widows():
     title = "Widows"
