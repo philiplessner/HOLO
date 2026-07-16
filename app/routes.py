@@ -16,11 +16,6 @@ def home():
     return render_template("index.html", title=title)
 
 
-@bp.route('/<path:filename>')
-def searchengine(filename):
-    return send_from_directory('static', filename)
-
-
 @bp.route("/children")
 def children():
     title = "Children"
@@ -100,8 +95,13 @@ def location():
 
 @bp.route("/sitemap.xml")
 def sitemap():
-    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-    return send_from_directory(root_dir, 'sitemap.xml')
+    return send_from_directory('static/', 'sitemap.xml')
+
+
+@bp.route("/robots.txt")
+def robots():
+    return send_from_directory('static/', 'robots.txt')
+
 
 @bp.route("/favicon.ico")
 def favicon():
