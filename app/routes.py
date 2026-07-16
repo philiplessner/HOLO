@@ -16,6 +16,11 @@ def home():
     return render_template("index.html", title=title)
 
 
+@bp.route('/<path:filename>')
+def searchengine(filename):
+    return send_from_directory('static', filename)
+
+
 @bp.route("/children")
 def children():
     title = "Children"
