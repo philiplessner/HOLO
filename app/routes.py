@@ -1,11 +1,10 @@
 from collections import namedtuple
 from datetime import datetime
-import os
-from flask import render_template, send_from_directory
-from flask import Blueprint
+
+from flask import Blueprint, render_template, send_from_directory
+
 from app import db
 from app.models import Blog
-
 
 bp = Blueprint('views', __name__, url_prefix='/')
 
@@ -28,7 +27,7 @@ def blog():
                       .select_from(Blog)
                       .order_by(Blog.date.desc()))
     blogs = db.session.execute(stmt).all()
-    rows = list()
+    rows = []
     for blog in blogs:
         blog = list(blog)
         blog[1] = iso2mdy(blog[1])
