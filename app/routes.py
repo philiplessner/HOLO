@@ -73,10 +73,17 @@ def mission_vision():
     title = "Mission&Vision"
     return render_template("mission_vision.html", title=title)
 
+
 @bp.route("/location")
 def location():
     title = "Location"
     return render_template("location.html", title=title)
+
+
+@bp.route("/form990N/<path:filename>")
+def download_990N(filename):
+    return(send_from_directory("files", filename)) 
+
 
 @bp.route("/sitemap.xml")
 def sitemap():

@@ -13,10 +13,21 @@
 }
   .background-image-container {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     flex-direction: column;
+    justify-content: flex-start;
     padding: 3rem 1rem;
+    min-height: 504px;
+  }
+
+  .background-image-container .w-100 {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  .background-image-container .download-990N {
+    margin-top: auto;
+    color: yellow;
   }
 
   .background-image-container h1 {
@@ -40,7 +51,7 @@
 {% block content %}
 <section>
   <div class="container-fluid my-3 mx-8">
-    <div class="background-image-container d-flex align-items-start justify-content-start">
+    <div class="background-image-container">
       <div class="w-100">
         <h1>Donate</h1>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick"><br>
@@ -48,11 +59,14 @@
       <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" type="image"><br>
       <img loading="lazy" decoding="async" style="display: block; margin-left: auto; margin-right: auto;" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0">
     </form>
+      <p class="download-990N"> Download Our Form 990N: 
+            <a href="{{ url_for('views.download_990N', filename='HOLO 2024-25 Form 990N.pdf' )}}"><img src="/static/images/pdf_file_icon.png" height="50"></a>
+            </p>
     </div>
+</div>
 </div>
 
   <div class="container-fluid bg-secondary text-light py-4">
-    <div class="container">
       <div class="row">
         <div class="col-12">
           <p class="fs-4">
@@ -100,10 +114,8 @@
         </div>
       </div>
     </div>
-  </div>
 
   <div class="container-fluid bg-info text-dark py-4">
-    <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-3 text-start">
           <img src="{{ url_for('static', filename='images/schoolhouse.png') }}" alt="School House" class="img-fluid">
@@ -130,6 +142,5 @@
         </div>
       </div>
     </div>
-  </div>
 </section>
 {% endblock %}
