@@ -2,5 +2,6 @@ __pycache__
 /images/
 /web-info/
 *.pdf
+!app/files/HOLO_2024-25_Form_990N.pdf
 /templates/children_extra.html
 /app/db/holo_backup.db
